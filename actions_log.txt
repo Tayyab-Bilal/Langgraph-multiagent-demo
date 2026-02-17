@@ -1,3 +1,12 @@
 {"timestamp": "2026-02-17T15:31:24.408604", "customer_id": "CUST_001", "action": "paused_6_months"}
 {"timestamp": "2026-02-17T15:35:25.875130", "customer_id": "CUST_002", "action": "battery_replacement"}
 {"timestamp": "2026-02-17T15:44:08.455672", "customer_id": "CUST_001", "action": "cancelled"}
+{"timestamp": "2026-02-17T17:36:20.090751", "customer_id": "CUST_001", "action": "cancelled"}
+{"timestamp": "2026-02-17T17:36:53.582055", "customer_id": "CUST_006", "action": "device_replacement"}
+{"timestamp": "2026-02-17T17:38:16.544272", "customer_id": "CUST_010", "action": "downgraded_basic"}
+{"timestamp": "2026-02-17T17:47:02.609198", "customer_id": "CUST_010", "action": "cancelled"}
+{"timestamp": "2026-02-17T17:49:22.376979", "customer_id": "CUST_010", "action": "cancelled"}
+{"timestamp": "2026-02-17T17:49:57.729082", "customer_id": "CUST_010", "action": "device_replacement"}
+{"timestamp": "2026-02-17T17:51:25.719823", "customer_id": "CUST_010", "action": "cancelled"}
+{"timestamp": "2026-02-17T18:14:31.563091", "customer_id": "CUST_010", "action": "device_replacement"}
+{"timestamp": "2026-02-17T18:15:35.335768", "customer_id": "CUST_010", "action": "paused_6_months"}

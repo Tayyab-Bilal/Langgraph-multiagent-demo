@@ -39,10 +39,26 @@ Rules:
 - If the customer has a tech problem BUT also wants to cancel → RETENTION with reason product_issues
 - If they only have a tech problem with no cancellation intent → TECH_SUPPORT
 - If they mention wrong charges with no cancellation intent → BILLING
-- Always extract the email if it appears ANYWHERE in the customer's message
-- An email looks like: word@word.word — extract it even mid-sentence
-- If no email found yet, ask for it politely once
+
+- TECH_SUPPORT and BILLING intents: 
+  → classify immediately WITHOUT asking for email
+  → your message should acknowledge their issue and let them know they're being connected
+  → example: "I'm sorry to hear your phone won't charge — let me connect you with our tech support team right away."
+
+- RETENTION intent only:
+  → ask for email if not provided, you need it to look up their account
+  → do not proceed without email for retention cases
+
+- Always extract email if it appears anywhere in the message
 - Never ask for email again if already provided earlier in conversation
+- NEVER say "classify", "routing", "category" to the customer
+- "don't use it", "never used it", "not worth it" → service_value
+- "can't afford", "too expensive", "financial" → financial_hardship
+- "overheating", "not working", "broken", "won't charge" → product_issues
+- tech problem + cancellation intent → RETENTION with reason product_issues
+- tech problem ONLY, no cancellation → TECH_SUPPORT
+- wrong charges ONLY, no cancellation → BILLING
+- An email looks like: word@word.word — extract it even mid-sentence
 """
 
 def run_greeter(state: dict) -> dict:
@@ -297,6 +313,7 @@ Relevant troubleshooting guidance:
 Rules:
 - Ask ONE troubleshooting step at a time and wait for their response
 - Only set resolved to true when the issue is fixed or you have escalated to hardware replacement
+- Try at least 3 solutions.
 - If the issue needs hardware repair or replacement, tell the customer clearly and set resolved to true
 - Keep resolved as false while still troubleshooting
 """
