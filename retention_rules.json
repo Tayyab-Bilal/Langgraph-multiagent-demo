@@ -1,0 +1,110 @@
+{
+  "financial_hardship": {
+    "premium_customers": [
+      {
+        "type": "pause",
+        "duration_months": 6,
+        "cost": 0,
+        "description": "Pause subscription for 6 months with no charges",
+        "authorization": "agent"
+      },
+      {
+        "type": "discount",
+        "percentage": 50,
+        "duration_months": 12,
+        "new_cost": 6.50,
+        "description": "50% discount for full year",
+        "authorization": "manager"
+      }
+    ],
+    "regular_customers": [
+      {
+        "type": "pause",
+        "duration_months": 3,
+        "cost": 0,
+        "description": "Pause subscription for 3 months",
+        "authorization": "agent"
+      },
+      {
+        "type": "downgrade",
+        "new_plan": "care_plus_basic",
+        "new_cost": 6.99,
+        "savings": 6.00,
+        "description": "Downgrade to basic plan",
+        "authorization": "agent"
+      }
+    ],
+    "new_customers": [
+      {
+        "type": "discount",
+        "percentage": 25,
+        "duration_months": 6,
+        "new_cost": 9.74,
+        "description": "25% discount for 6 months",
+        "authorization": "agent"
+      }
+    ]
+  },
+  "product_issues": {
+    "overheating": [
+      {
+        "type": "device_replacement",
+        "model": "same_model",
+        "cost": 0,
+        "description": "Free replacement device",
+        "authorization": "agent"
+      },
+      {
+        "type": "upgrade",
+        "to_model": "latest_version",
+        "cost_difference": 0,
+        "description": "Free upgrade to latest model",
+        "authorization": "manager"
+      }
+    ],
+    "battery_issues": [
+      {
+        "type": "battery_replacement",
+        "cost": 0,
+        "description": "Free battery replacement",
+        "authorization": "agent"
+      }
+    ]
+  },
+  "service_value": {
+    "care_plus_premium": [
+      {
+        "type": "explain_benefits",
+        "benefits": [
+          "Zero deductible screen repair ($300 value)",
+          "Water damage protection ($500+ value)",
+          "Priority technical support",
+          "Accidental damage coverage"
+        ]
+      },
+      {
+        "type": "trial_extension",
+        "duration_months": 3,
+        "refund_promise": "Full refund if unused after 3 months",
+        "authorization": "agent"
+      },
+      {
+        "type": "downgrade",
+        "new_plan": "care_plus_basic",
+        "new_cost": 6.99,
+        "authorization": "agent"
+      }
+    ]
+  },
+  "authorization_levels": {
+    "agent": {
+      "max_discount_percentage": 25,
+      "can_pause": true,
+      "can_downgrade": true
+    },
+    "manager": {
+      "max_discount_percentage": 50,
+      "can_custom_offers": true
+    }
+  }
+}
